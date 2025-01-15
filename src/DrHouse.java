@@ -2,6 +2,22 @@ import java.io.*;
 import java.util.*;
 
 public class DrHouse {
+    public static void main(String[] args) {
+        String filePath = "C:\\Users\\admin\\IdeaProjects\\MitriMiruna722Aufgabe1\\src\\fallakten.csv";
+        List<String[]> data = readData(filePath);
+
+        // Aufgabe b
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Geben Sie einen Großbuchstaben ein: ");
+        String letter = scanner.nextLine().toUpperCase();
+
+        System.out.println("\nNamen mit '" + letter + "' beginnen:");
+        displayStudentsByLetter(data, letter);
+
+        // Aufgabe d
+        saveFalleKrankenhaus(data, "C:\\Users\\admin\\IdeaProjects\\MitriMiruna722Aufgabe1\\src\\fallakten.txt");
+        System.out.println("\nDas Ergebnis gespeichert");
+    }
     // Aufgabe a:
     /**
      * Reads data from a file.
