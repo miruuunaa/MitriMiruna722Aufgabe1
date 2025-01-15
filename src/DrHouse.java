@@ -30,4 +30,14 @@ public class DrHouse {
         }
         return data;
     }
+
+    // Aufgabe b
+    public static void displayStudentsByLetter(List<String[]> data, String letter) {
+        for (String[] entry : data) {
+            String name = entry[1];
+            if (name.startsWith(letter)) {
+                System.out.println(name);
+            }
+        }
+    }
 }
